@@ -17,6 +17,7 @@
                 background: #F8F0D1;
                 width: 700px;
                 border-radius: 15px;
+                padding: 30px 40px;
             }
 
         </style>
