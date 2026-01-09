@@ -10,7 +10,12 @@ Route::get('/se', function(){
     return view('template.default');
 });
 
-route::get('/MyController', [App\Http\Controllers\MyController::class, 'index']);
-route::get('/calculate', [App\Http\Controllers\MyController::class, 'info']);
-route::post('/calculate', [App\Http\Controllers\MyController::class, 'calculate']);
-route::post('/regis' ,[App\Http\Controllers\MyController::class, 'regis']);
+Route::get('/MyController', [App\Http\Controllers\MyController::class, 'index']);
+Route::get('/calculate', [App\Http\Controllers\MyController::class, 'info']);
+Route::post('/calculate', [App\Http\Controllers\MyController::class, 'calculate']);
+Route::post('/regis' ,[App\Http\Controllers\MyController::class, 'regis']);
+
+
+Route::resource('/flights', App\Http\Controllers\FlightController::class);
+
+Route::resource('/pokedexs' ,  App\Http\Controllers\PokedexController::class);
